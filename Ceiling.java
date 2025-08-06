@@ -3,6 +3,7 @@ public class Ceiling {
        int arr[] = {2,3,5,9,14,16,18};
        int key = 11;
        System.out.println("Index is " + binarySearch(arr, key));
+
     }
      public static int binarySearch(int[] arr, int target) {
         int left = 0, right = arr.length - 1;
