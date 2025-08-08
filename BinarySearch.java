@@ -9,7 +9,7 @@ public class BinarySearch {
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == key) {
-                System.out.print("target : " + mid);
+                System.out.println("target : " + mid);
                 found = true;
                 break;
             } else if (arr[mid] > key) {
