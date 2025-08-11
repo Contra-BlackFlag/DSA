@@ -1,6 +1,6 @@
 public class FindPeakInMountainArray {
     public static void main(String[] args) {
-         int arr[] = {0,1,0};
+         int arr[] = {0,1,2,3,7,4};
          int start = 0;
          int end = arr.length -1;
          while (start<end) {
@@ -14,4 +14,5 @@ public class FindPeakInMountainArray {
          }
          System.out.println(start + " " + end);
     }
+    
 }
