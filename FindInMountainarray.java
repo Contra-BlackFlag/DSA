@@ -8,7 +8,7 @@ public class FindInMountainarray {
             int ans = binarySearch(arr, target, 0, end);
             int ans1;
             if (ans == -1) {
-                ans1 = binarySearch(arr, target, start, arr.length-1);
+                ans1 = binarySearch(arr, target, start+1, arr.length-1);
                 if (ans == -1 && ans1 == -1) {
                     System.out.println("Not found");
                 }
