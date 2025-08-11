@@ -2,21 +2,20 @@ public class FindInMountainarray {
     public static void main(String[] args) {
 
             int arr[] = {1,2,3,4,5,3,3,1};
-            int target = 3;
+            int target = 1;
             int end = FindPeak(arr);
             int start = end;
             int ans = binarySearch(arr, target, 0, end);
-            int ans1 = binarySearch(arr, target, start, arr.length-1);
-            if (ans == -1 && ans1 == -1) {
-                System.out.println("Not found");
-            }
-            else{
-                if (ans == -1) {
-                    System.out.println(ans1);
+            int ans1;
+            if (ans == -1) {
+                ans1 = binarySearch(arr, target, start, arr.length-1);
+                if (ans == -1 && ans1 == -1) {
+                    System.out.println("Not found");
                 }
-                else System.out.println(ans);
+                else System.out.println(ans1);
             }
-
+            else System.out.println(ans);
+            
             }
             public static int binarySearch(int[] arr,int key,int start,int end){
             while (start <= end) {
