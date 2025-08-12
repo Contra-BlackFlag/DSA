@@ -1,7 +1,7 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 
-public class TryingHardFindInMountainarray {
+public class FindInMountainarray {
     public static void main(String[] args) {
 
             int arr[] = {0,5,3,1};
@@ -25,17 +25,17 @@ public class TryingHardFindInMountainarray {
                     int mid = start + (end - start) / 2;
                     if (arr[mid] == key) {
                         return mid;
-                    } else if (arr[mid] > key) {
-                        if(Asc){
+                    } else if (Asc) {
+                        if(arr[mid] > key){
                             end = mid - 1;
                         }
-                        else end = mid + 1;
+                        else start = mid + 1;
                     } 
-                    else if (arr[mid] < key) {
-                       if(Asc){
-                            start = mid + 1;
+                    else  {
+                       if(arr[mid] < key){
+                            end  = mid - 1;
                        }
-                       else start = mid - 1;
+                       else start = mid + 1;
                     }
                 }
                 return -1;
