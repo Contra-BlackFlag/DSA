@@ -1,20 +1,20 @@
 public class FindInRotatedArray {
     public static void main(String[] args) {
-        int target = 1;
-        int arr[]= {1};
+        int target = 3;
+        int arr[]= {3,5,1};
         int pivot = Pivot(arr);
-        if (pivot == -1) {
-            System.out.println(BinarySearch(0,arr.length - 1,arr,target));
+        if(pivot == -1){
+           System.out.println(BinarySearch(0,arr.length - 1,arr,target));
         }
-        int ans = BinarySearch(0,pivot,arr,target);
-        if ( ans == -1){
-            ans = BinarySearch(pivot + 1, arr.length - 1, arr, target);
-            if (ans == -1) {
-                System.out.println("not found");
-            }
-            else System.out.println(ans);
+        else if(arr[pivot] == target){
+            System.out.println(pivot);
         }
-        else System.out.println(ans);
+        else if(arr[0]>target){
+            
+            System.out.println(BinarySearch(pivot+1,arr.length - 1,arr,target));
+        }
+        else System.out.println(BinarySearch(0,pivot,arr,target));
+
         
     }
     static int BinarySearch(int start,int end,int[] arr,int key){
