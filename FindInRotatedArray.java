@@ -1,7 +1,7 @@
 public class FindInRotatedArray {
     public static void main(String[] args) {
         int target = 0;
-        int arr[]= {1};
+        int arr[]= {1,0,1,1,1};
         int pivot = PivotWithDuplicates(arr);
         if(pivot == -1){
            System.out.println(BinarySearch(0,arr.length - 1,arr,target));
