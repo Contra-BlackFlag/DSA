@@ -1,6 +1,7 @@
 public class BinarySearch {
+
     public static void main(String[] args) {
-        int arr[] = {2, 4, 5, 8, 18, 44, 55};
+        int arr[] = { 2, 4, 5, 8, 18, 44, 55 };
         int key = 18;
         int start = 0;
         int end = arr.length - 1;
@@ -14,7 +15,6 @@ public class BinarySearch {
                 break;
             } else if (arr[mid] > key) {
                 end = mid - 1;
-            } else if (arr[mid] < key) {
                 start = mid + 1;
             }
         }
