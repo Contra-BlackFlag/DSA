@@ -1,31 +1,35 @@
 public class SplitArrayLargestSum {
      public static void main(String[] args) {
         int[] arr = {2,4,3,4,6,1};
-        int k = 6;
+        int k = 2;
         System.out.println(LargestSum(arr, k));
     }
 
     static int LargestSum(int []arr,int k){
-        int ans = 0;
-        if (k<=1 || k == arr.length) {
-            if (k==arr.length) {
-                for(int i = 0;i<arr.length;i++){
-                    if (arr[i]>=ans) {
-                        ans = arr[i];
-                    }
-                }
-                return ans;
-            }
-            else if(k<1){
-                return -1;
-            }
-            else{
-                for(int i = 0; i<arr.length; i++){
-                    ans = ans + arr[i];
-                }
-                return ans;
-            }
+        int start = 0;
+        int end = 0;
+        for (int i = 0; i < arr.length; i++) {
+            start = Math.min(start, arr[i]);
+            end = end + arr[i];
         }
-        return -1;
+       
+
+        while (start<end) {
+            int sum = 0;
+            int pieces = 1;
+            int mid = start + (end - start)/2;
+            for(int num : arr){
+                if (sum + num > mid) {
+                    sum = num;
+                    pieces++;
+                }
+                else sum = sum + num;
+            }
+            if (pieces>k) {
+                start = mid + 1;
+            }
+            else end = mid;
+        }
+        return end;
     }
 }
