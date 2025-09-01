@@ -8,11 +8,12 @@ public class SplitArrayLargestSum {
     static int LargestSum(int []arr,int k){
         int start = 0;
         int end = 0;
+
         for (int i = 0; i < arr.length; i++) {
-            start = Math.min(start, arr[i]);
+            start = Math.max(start, arr[i]);
             end = end + arr[i];
+            
         }
-       
 
         while (start<end) {
             int sum = 0;
