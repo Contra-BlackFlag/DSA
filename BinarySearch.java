@@ -10,13 +10,13 @@ public class BinarySearch {
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == key) {
-                System.out.println("target : " + mid);
+                System.out.println("target index : " + mid);
                 found = true;
                 break;
-            } else if (arr[mid] > key) {
-                end = mid - 1;
+            } else if (key > arr[mid]) {
                 start = mid + 1;
             }
+            else end = mid;
         }
 
         if (!found) {
