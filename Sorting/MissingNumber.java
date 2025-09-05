@@ -1,6 +1,7 @@
+package Sorting;
 class MissingNumber{
    public static void main(String[] args) {
-        int[] arr = {3,1,7,4,2,6,0};
+        int[] arr = {4,3,2,7,8,2,3,1};
         Sort(arr);
         System.out.println(Sort(arr));
     }
@@ -10,6 +11,7 @@ class MissingNumber{
             int correct = i;
             if (arr[i]>=arr.length) {
                 arr[i] = arr[i];
+                
             }
             else correct = arr[i];
             if (arr[i] != arr[correct]) {
