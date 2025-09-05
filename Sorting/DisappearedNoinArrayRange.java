@@ -2,7 +2,7 @@ package Sorting;
 import java.util.*;
 public class DisappearedNoinArrayRange {
     public static void main(String[] args) {
-        int[] arr = {4,3,2,7,8,2,3,1}; // 1,2,2,3,3,4,7,8
+        int[] arr = {4,3,2,7,8,2,3,1}; // 1,2,3,4,2,3,7,8
         System.out.println(sort(arr));
     }
     static List<Integer> sort(int[] arr){
@@ -27,7 +27,7 @@ public class DisappearedNoinArrayRange {
         }
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] != j + 1) {
-                Disappeared.add(j+1);
+                Disappeared.add(j);
             }
         }
        return Disappeared;
