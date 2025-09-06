@@ -1,7 +1,5 @@
 package Sorting;
 
-import java.util.Arrays;
-
 public class FindtheDuplicate {
     public static void main(String[] args) {
         int[] arr = {3,1,3,4,2};  

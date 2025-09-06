@@ -1,16 +1,13 @@
 package Sorting;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class FindAllDuplicatesinArray {
+import java.util.*;
+public class SetMismatch {
     public static void main(String[] args) {
-        int arr[] = {4,3,2,7,8,2,3,1};
-        // Sort(arr);
-        System.out.println(Sort(arr));
+        int arr[] = {1,2,2,4};
+        
+        System.out.println(Arrays.toString(Sort(arr)));
     }
-     static List<Integer> Sort(int[] arr){
-        ArrayList<Integer> Duplicate = new ArrayList<>();
+     static int[] Sort(int[] arr){
+        int[] ans = new int[2];
         int i = 0;
         while (i<arr.length) {
             int correct = i;
@@ -31,9 +28,11 @@ public class FindAllDuplicatesinArray {
         }
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] != j + 1) {
-                Duplicate.add(arr[j]);
+                ans[0] = arr[j];
+                ans[1] = j+1;
+                break;
             }
         }
-        return Duplicate;
+        return ans;
     }
 }
