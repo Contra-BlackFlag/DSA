@@ -17,15 +17,18 @@ public class FindtheDuplicate {
                 arr[i] = arr[correct];
                 arr[correct] = temp;
                 }
-                else i++; 
+                else{
+                    return arr[i];
+                }
             }
+            else i++;
 
         }
-        for (int j = 0; j < arr.length; j++) {
-            if (arr[j] != j+1) {    // [1, 2, 3, 4, 3]
-                return arr[j];
-            }
-        }
+        // for (int j = 0; j < arr.length; j++) {
+        //     if (arr[j] != j+1) {    // [1, 2, 3, 4, 3]
+        //         return arr[j];
+        //     }
+        // }
         return -1;
     }
 }
