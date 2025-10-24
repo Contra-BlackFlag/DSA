@@ -6,7 +6,7 @@ public class BinarySearch {
         int start = 0;
         int end = arr.length - 1;
         boolean found = false;
-
+        
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == key) {
@@ -17,8 +17,8 @@ public class BinarySearch {
                 start = mid + 1;
             }
             else end = mid;
-        }
-
+        } 
+        
         if (!found) {
             System.out.println("Not found");
         }

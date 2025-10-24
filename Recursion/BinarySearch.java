@@ -6,7 +6,7 @@ public class BinarySearch {
         int[] arr = {-1,0,3,5,9,12};
         int ans = binarySearchrecursion(arr, 2, 0, arr.length - 1);
         System.out.println(ans);
-        
+       
     }
       static int binarySearchrecursion(int[] arr,int key,int start, int end){
         if (start>end) {
