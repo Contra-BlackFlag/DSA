@@ -1,7 +1,7 @@
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int arr2[] = {3};
+
         int arr[] = { 2, 4, 5, 8, 18, 44, 55 };
         int key = 18;
         int start = 0;
